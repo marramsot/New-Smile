@@ -11,7 +11,7 @@ header,
 footer{
     width: 100%;
     padding: 1%;
-    background-color: #84c6ec;
+    background-color: #c399c3;
     /*Flexbox*/
     display:flex;
     justify-content: space-between;
@@ -20,7 +20,7 @@ footer{
     color: rgb(76, 74, 74); 
     font-size: clamp(.6rem, 5vw, 1.1rem);
 }
-footer nav h3 img{
+.nav__icon{
     width: 100%;
     font-size: clamp(.6rem, 5vw, 1rem);
     line-height: 150%;
@@ -38,7 +38,7 @@ main{
     background-position: 70%;
     opacity: 80%;
 }
-.banner nav a{ 
+.menu__option{ 
     text-align: right; 
     text-decoration: none;/*le quita el subrayado a las etiquetas a del contenedor nav*/
     font-weight: 900;
@@ -82,23 +82,23 @@ main{
     line-height:180%;
 }
 
-.flex-container{
+.flex__container{
     display:flex;
     flex-grow: 1;
     flex-direction: row;
     padding-top: 2%;   
     margin:auto;
 }
-.flex-container article{
+.container__article{
     margin:1%;
     line-height: 200%;   
     justify-content: center;
     width: 33.33%;
 }
-.flex-container video{
+.flex__container video{
     width: 40%;   
 }
-.grid-lists{
+.grid__list{
     display: grid;
     grid-template-columns: repeat(2,1fr);
     text-align: justify; 
@@ -106,40 +106,40 @@ main{
     place-items: center;
     margin: auto;
 }
-.grid-list-one{
+.list__one{
     grid-column-start: 1;
     grid-column-end: 2;
     grid-row-start: 1;
     text-align: center;   
 }
-.grid-list-two{
+.list__two{
     grid-column-start: 1;
     grid-column-end: 1;
     grid-row-start: 2;
      
 }
-.grid-list-three{
+.list__three{
     grid-column-start: 2;
     grid-column-end: 2;
     grid-row-start: 2;     
 }
-footer nav small{
+.nav__copy{
     font-size: clamp(.3rem,5vw,.6rem);
     line-height: 150%;
 }
-footer nav address{
+.nav__address{
     font-size: clamp(.5rem, 5vw, .8rem);
     line-height: 150%;
 }
-footer nav h4{
+.nav__title{
     font-size: clamp(.6rem, 5vw, 1rem);
     line-height: 150%;
 }
-.vision h2{
+.vision__title{
     font-size: clamp(.6rem, 5vw, 1.5rem);
     line-height: 150%;  
 }
-.mision h2{
+.mision__title{
     font-size: clamp(.6rem, 5vw, 1.5rem);
     line-height: 150%; 
 }
@@ -186,7 +186,7 @@ ol{
 .doctors td,th{
     border: 1px solid rgb(11, 11, 11);
 }
-.doctors img{
+.doctors__img{
     width: 20%;
     height: 15%;
 }
@@ -211,6 +211,20 @@ input[type="submit"]:hover{
    background-color: #f4eac4;
    color:#121112; 
 }
+.paciente__img:hover{
+opacity: 80%;
+}
+.paciente__donar:hover{
+    background-color: #84c6ec;
+    font-weight: bold;
+    cursor: pointer;
+}
+.paciente__donar{
+    border-radius: 20%;
+    border-color: rgb(218, 213, 213);
+    width: 30%;
+    height: 10%;
+}
 a:active{
     background-color: rgb(127, 255, 212);
 }
@@ -233,15 +247,16 @@ a:active{
     box-sizing: border-box;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
 }
 @media screen and (max-width: 64em){
-    .flex-container{
+    .flex__container{
         flex-direction: column; /*Despliaga los elementos en una columna*/  
     }
-    .flex-container article{
+    .container__article{
         align-self: center;
     }
-    .flex-container video{
+    .article__video{
         width: 100%;   
     }
     .doctors img{
@@ -253,10 +268,10 @@ a:active{
     }
 }
 @media screen and  (max-width: 25.75em){
-     .flex-container article{
+     .container__article{
        align-self: auto;
     }
-    .flex-container video{
+   .container__video{
         width: 100%;   
     }
     .doctors img{
@@ -280,13 +295,13 @@ a:active{
     .highlight{
         color: rgb(226, 84, 84);
     } 
-    .banner nav a{        
+   .menu__option{        
         color: #fff;        
     } 
  }
  @media (hover: hover){
         input[type="submit"]:hover{
-        background-color: #f4eac4;
+        background-color: #e6aad8;
         color:#121112; 
      }
  }
